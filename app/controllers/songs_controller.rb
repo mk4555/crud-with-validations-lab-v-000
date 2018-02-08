@@ -28,6 +28,9 @@ class SongsController < ApplicationController
     @song = Song.find(params[:id])
     if @song.update(songs_params)
       redirect_to song_path(@song)
+    else
+      
+    end
   end
 
   def delete
