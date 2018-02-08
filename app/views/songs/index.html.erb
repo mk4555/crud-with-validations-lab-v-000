@@ -16,6 +16,9 @@
         <td><%=song.released%></td>
         <td><%=song.genre%></td>
         <td><%=song.artist_name%></td>
+        <%= link_to 'Show', song %>
+        <%= link_to 'Edit', edit_song_path(song) %>
+        <%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %>
       </tr>
     <%end%>
   </tbody>
