@@ -9,6 +9,11 @@
   </tr>
   </thead>
   <tbody>
+    <%@songs.each do |song|%>
+      <tr>
+        <td><%=song.title%><td>
+          <td><%=song.release_year%></td>
+    <%end%>
   <tr>
      <td>January</td>
      <td>$100</td>
