@@ -1,17 +1,17 @@
 <%=form_for(@song) do |f|%>
-<% if @song.errors.any? %>
- <div id="error_explanation">
-   <h2>
-     There were errors
-   </h2>
+  <% if @song.errors.any? %>
+   <div id="error_explanation">
+     <h2>
+       Encountered Errors:
+     </h2>
 
-   <ul>
-   <% @song.errors.full_messages.each do |msg| %>
-     <li><%= msg %></li>
-   <% end %>
-   </ul>
- </div>
-<% end %>
+     <ul>
+     <% @song.errors.full_messages.each do |msg| %>
+       <li><%= msg %></li>
+     <% end %>
+     </ul>
+   </div>
+  <% end %>
 
   <%=f.label :title%>
   <%=f.text_field :title%> <br>
