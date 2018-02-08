@@ -12,7 +12,7 @@ class SongsController < ApplicationController
   end
 
   def create
-    @song = Song.new(params)
+    @song = Song.new(songs_params)
     if @song.valid?
       @song.save
       redirect_to song_path(@song)
